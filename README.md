@@ -1,4 +1,4 @@
-# Manual Cluster API Server Auditing
+# Manual Cluster API Server Logging for Audits
 
 This document was created to outline effective an deployment template for logging activity within a manual provisioned Kubernetes cluster. As highlighted in the OWASP Top 10, establishing a robust and efficient logging system is essential for auditing events and communications across containerized deployments.
 
