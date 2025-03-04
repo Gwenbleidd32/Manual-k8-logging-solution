@@ -127,7 +127,7 @@ volumes:
     name: audit
   - hostPath:
       path: /var/log/audit.log
-      type: FileOrCreate #<-- Tells the server te create if file does not exist
+      type: FileOrCreate #<-- Tells the server to create if file does not exist
     name: audit-log
 ```
 
