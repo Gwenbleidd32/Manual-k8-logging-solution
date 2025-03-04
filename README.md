@@ -4,7 +4,7 @@ This document was created to outline effective an deployment template for loggin
 
 In the following sections, I will walk through the process of configuring custom logs tailored to specific kubectl API resources. By designing and implementing a structured logging strategy, we can capture various types of API requests, responses, and resource metadata—allowing for improved monitoring, security analysis, and vulnerability detection.
 
-However do note this solution is not necessary when using clusters provisioned in managed Kubernetes environments. Each major cloud provider has custom solutions for native logging
+However; do note this solution is not necessary when using clusters provisioned in managed Kubernetes environments. Each major cloud provider has custom solutions for native logging
 
 For a free, easy-to-use lab environment to test this configuration, you can follow the link below to access Kubernetes playgrounds that simulate manually provisioned clusters, similar to those used in official Kubernetes certification exams:
 - https://killercoda.com/playgrounds
@@ -134,7 +134,7 @@ volumes:
 ---
 ##### Full Example 
 
-See the below complete `kube-apiserver.yaml` manifest as placement guide for the resources we provisioned and changed. After Saving any updates if you encounter any errors be sure to check for alignment mis configurations, typos and spellcheck is your kubectl commands are no longer working. 
+See the below complete `kube-apiserver.yaml` manifest as a placement/formatting guide for the resources we provisioned and changed. After Saving any updates if you encounter any errors be sure to check for alignment mis configurations, typos and spellcheck issues if your kubectl commands are no longer working for longer than 1 min. 
 
 Once you've taken any corrective action or if you had a successful deployment, you'll be able to make calls to kubectl shortly after updating. 
 
