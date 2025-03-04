@@ -1,0 +1,35 @@
+#CONTAINER-COMMAND-TEMPLATE: INSERT WITHIN EXISTING STRUCTURE BLOCK ALPHABETICALLY! 
+
+spec:
+  containers:
+  - command:
+    - kube-apiserver
+    - --advertise-address=172.30.1.2
+    - --allow-privileged=true
+    - --audit-log-maxage=7 #<-- insert this line
+    - --audit-log-maxbackup=2 #<-- insert this line
+    - --audit-log-maxsize=50 #<-- insert this line
+    - --audit-log-path=/var/log/audit.log #<-- insert this line
+    - --audit-policy-file=/etc/kubernetes/simple-policy.yaml #<-- insert this line
+
+#VOLUME-MOUNT-AND-HOST-PATH-TEMPLATE: INSERT WITHIN EXISTING STRUCTURE AND FOLLOW EXISTING SPACING!
+
+#MOUNTS
+volumeMounts:
+  - mountPath: /etc/kubernetes/simple-policy.yaml #<-- Use same file names here
+    name: audit
+    readOnly: true
+  - mountPath: /var/log/audit.log #<-- And here
+    name: audit-log
+    readOnly: false
+---
+#HOST-PATHS
+volumes:
+  - hostPath: #<-- Add these eight lines
+      path: /etc/kubernetes/simple-policy.yaml
+      type: File
+    name: audit
+  - hostPath:
+      path: /var/log/audit.log
+      type: FileOrCreate #<-- Tells the server te create if file does not exist
+    name: audit-log
