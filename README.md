@@ -283,7 +283,7 @@ spec:
 status: {}
 ```
 
-##### To check your work
+### Check your work
 
 *Use the Tail Command we can view live writes from our api-server to the logging file*
 ```shell
