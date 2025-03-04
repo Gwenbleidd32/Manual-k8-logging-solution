@@ -132,7 +132,7 @@ volumes:
 ```
 
 ---
-##### Full Example 
+### Full Example 
 
 See the below complete `kube-apiserver.yaml` manifest as a placement/formatting guide for the resources we provisioned and changed. After Saving any updates if you encounter any errors be sure to check for alignment mis configurations, typos and spellcheck issues if your kubectl commands are no longer working for longer than 1 min. 
 
